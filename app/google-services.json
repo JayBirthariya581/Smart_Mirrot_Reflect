@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "682259385898",
+    "firebase_url": "https://iot-reflect-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "iot-reflect",
+    "storage_bucket": "iot-reflect.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:682259385898:android:398eadb83ac632f7d63d53",
+        "android_client_info": {
+          "package_name": "com.iot.reflect"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9fDZHZz_nzDBzn_VRS87JKusokWJH4DM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
