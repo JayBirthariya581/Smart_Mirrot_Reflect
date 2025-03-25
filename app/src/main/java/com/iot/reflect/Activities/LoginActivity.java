@@ -46,7 +46,6 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-
         sessionManager = new SessionManager(LoginActivity.this);
         auth = FirebaseAuth.getInstance();
         //Hooks
