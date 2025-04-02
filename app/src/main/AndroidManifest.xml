@@ -16,6 +16,12 @@
         android:theme="@style/Theme.SmartMirror"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".Activities.TodoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.MusicActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activities.DisplayTextActivity"
             android:exported="false" />
         <activity

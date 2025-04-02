@@ -7,7 +7,7 @@
     android:background="@color/status"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context=".Fragments.HomeFragment">
+    tools:context=".Activities.MusicActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,10 +21,10 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/baloo"
-            android:text="Smart Mirror Dashboard"
+            android:text="Play Music"
             android:textColor="@color/teal_200"
             android:textSize="25sp"
-             />
+            />
 
 
         <LinearLayout
@@ -38,9 +38,9 @@
 
             <!-- Play Music Card -->
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/adjust"
+                android:id="@+id/m1"
                 android:layout_width="0dp"
-                android:layout_height="150dp"
+                android:layout_height="100dp"
                 android:layout_marginEnd="8dp"
                 android:layout_weight="1"
                 android:background="@color/back_main"
@@ -56,12 +56,6 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_adjust" />
-
                     <TextView
 
                         android:layout_width="wrap_content"
@@ -69,7 +63,8 @@
                         android:layout_gravity="center"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/poppins_semibold"
-                        android:text="Adjust Mirror"
+                        android:textColor="@color/black"
+                        android:text="Melody 1"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
@@ -79,9 +74,9 @@
 
             <!-- Voice Control Card -->
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/music"
+                android:id="@+id/m2"
                 android:layout_width="0dp"
-                android:layout_height="150dp"
+                android:layout_height="100dp"
                 android:layout_marginStart="8dp"
                 android:layout_weight="1"
                 android:clickable="true"
@@ -98,11 +93,6 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_music" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -110,7 +100,8 @@
                         android:layout_gravity="center"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/poppins_semibold"
-                        android:text="Play Music"
+                        android:text="Melody 2"
+                        android:textColor="@color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
@@ -122,6 +113,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:gravity="center"
             android:orientation="horizontal"
             android:padding="16dp"
@@ -129,9 +121,9 @@
 
             <!-- Play Music Card -->
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/todo"
+                android:id="@+id/m3"
                 android:layout_width="0dp"
-                android:layout_height="150dp"
+                android:layout_height="100dp"
                 android:layout_marginEnd="8dp"
                 android:layout_weight="1"
                 android:background="@color/back_main"
@@ -147,20 +139,15 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_todo" />
-
                     <TextView
-                        android:id="@+id/tv_play_music"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/poppins_semibold"
-                        android:text="TODO"
+                        android:textColor="@color/black"
+                        android:text="Melody 3"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
@@ -170,11 +157,10 @@
 
             <!-- Voice Control Card -->
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/news"
+                android:id="@+id/m4"
                 android:layout_width="0dp"
-                android:layout_height="150dp"
+                android:layout_height="100dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="5dp"
                 android:layout_weight="1"
                 android:clickable="true"
                 android:focusable="true"
@@ -190,20 +176,15 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_news" />
 
                     <TextView
-                        android:id="@+id/tv_voice_control"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/poppins_semibold"
-                        android:text="News"
+                        android:text="Melody 4"
+                        android:textColor="@color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
@@ -212,24 +193,25 @@
         </LinearLayout>
 
 
-        <!-- Row 1: Greeting & News Feed -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:gravity="center"
             android:orientation="horizontal"
             android:padding="16dp"
-            android:weightSum="2"
-            app:layout_constraintTop_toTopOf="parent">
+            android:weightSum="2">
 
-            <!-- Greetings Card -->
+            <!-- Play Music Card -->
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/display"
+                android:id="@+id/m5"
                 android:layout_width="0dp"
-                android:layout_height="150dp"
+                android:layout_height="100dp"
                 android:layout_marginEnd="8dp"
                 android:layout_weight="1"
-                app:cardBackgroundColor="@color/white"
+                android:background="@color/back_main"
+                android:clickable="true"
+                android:focusable="true"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="8dp">
 
@@ -240,32 +222,32 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_text" />
-
                     <TextView
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/poppins_semibold"
-                        android:text="Display Message"
+                        android:textColor="@color/black"
+                        android:text="Melody 5"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
+
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- News Feed Card -->
+            <!-- Voice Control Card -->
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/affirmation"
+                android:id="@+id/m6"
                 android:layout_width="0dp"
-                android:layout_height="150dp"
+                android:layout_height="100dp"
                 android:layout_marginStart="8dp"
                 android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/poppins_semibold"
                 app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="8dp">
@@ -277,11 +259,6 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_affirmation" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -289,7 +266,8 @@
                         android:layout_gravity="center"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/poppins_semibold"
-                        android:text="Affirmations"
+                        android:text="Melody 6"
+                        android:textColor="@color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
@@ -297,12 +275,14 @@
             </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
 
-        <!-- Row 2: Play Music & Voice Control -->
+
+
+
 
 
         <!-- Row 3: Video Streaming -->
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/image"
+            android:id="@+id/pause"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_margin="16dp"
@@ -324,7 +304,7 @@
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/ic_image" />
+                    android:src="@drawable/ic_pause" />
 
                 <TextView
                     android:id="@+id/tv_stream_video"
@@ -333,7 +313,7 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="5dp"
                     android:fontFamily="@font/poppins_semibold"
-                    android:text="Display Image"
+                    android:text="Pause Music"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </LinearLayout>
